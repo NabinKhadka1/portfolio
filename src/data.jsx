@@ -88,7 +88,7 @@ export const data = [
     desc: "Surf through a huge collection of items. Implemented cart, authentication, authorization, products, orders, shipping, admin, search and much more",
     languages: ["React", "Node", "MongoDB"],
     code: "",
-    demo: "",
+    demo: "https://youtu.be/50-w0JZQA4k",
     titleLogo: <FaShoppingCart />,
     projectType: "fullstack",
   },
