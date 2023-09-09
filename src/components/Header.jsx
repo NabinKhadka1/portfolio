@@ -3,7 +3,8 @@ import Ham from "/hamburger.svg";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiJavascript, SiMongodb} from "react-icons/si";
 import { contextApi } from "../context";
-import Nabin from "/nabinkhadka.png";
+// import Nabin from "/nabinkhadka.png";
+import Nabin from '/nabin.jpg';
 
 const Header = () => {
   const { openSidebar } = useContext(contextApi);

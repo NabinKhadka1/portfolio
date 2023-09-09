@@ -1,5 +1,5 @@
-import Jadoo from "/jadoo1.png";
-import skilline from "/skilline1.png";
+import Jadoo from '/jadoo2.png';
+import skilline from '/skilline.png';
 import News from "/news.png";
 import GithubInfo from "/githubInfo.png";
 import Cocktail from "/cocktail.png";
