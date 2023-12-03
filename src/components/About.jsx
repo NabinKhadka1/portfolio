@@ -15,13 +15,7 @@ const About = () => {
               A passionate web developer based in Kathmandu
             </h3>
             <p>
-              I'm a junior developer trying to start my career in the tech
-              industry. I posses impressive skills in HTML, CSS, JavaScript,
-              React, Node, Express and MongoDB. I'm proficient in
-              several programming language,frameworks and databases. I'm always
-              looking for an opportunity to learn and grow as a developer, and I
-              believe that my collaboration and skills would make me an asset to
-              any team
+            With over 1.5 years in the tech industry, I possess impressive skills in HTML, CSS, JavaScript, React, Node, Express, and MongoDB. Dedicated to crafting robust and pristine code, I always emphasize security protocols. My expertise extends to collaborative teamwork, delivering impactful websites and web applications that engage users and drive tangible business results.
             </p>
           </div>
         </div>
