@@ -42,18 +42,24 @@ a {
 }
 .btn {
   border: 1px solid var(--primary-color);
-  background: none;
+  background: var(--secondary-bgc);
   color: var(--primary-color);
-  padding: 0.5rem 0.7rem;
+  padding: 0.6rem 0.9rem;
   border-radius: 0.25rem;
   cursor: pointer;
+  transition: all 180ms ease;
+  box-shadow: 0 6px 18px rgba(24, 24, 35, 0.04);
 }
 .btn:hover {
-  border: 1px solid var(--tertiary-color);
-  background: transparent;
+  transform: translateY(-2px);
+  border-color: var(--tertiary-color);
   color: var(--tertiary-color);
 }
-.active {
+.btn:focus {
+  outline: 3px solid rgba(10, 177, 226, 0.18);
+  outline-offset: 2px;
+}
+.btn.active {
   border: 1px solid var(--tertiary-color);
   background: var(--tertiary-color);
   color: var(--primary-bgc);
@@ -195,6 +201,64 @@ a {
   object-fit: cover;
   border: 2px solid var(--primary-color);
   border-radius: 55% 5% 70% 30% / 30% 20% 35% 20%;
+}
+
+/* profile card */
+.profile-card {
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(24, 24, 35, 0.06);
+  border: 1px solid rgba(24, 24, 35, 0.04);
+}
+.avatar {
+  background: var(--primary-color);
+  color: #fff;
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 20px rgba(24, 24, 35, 0.06);
+}
+.meta {
+  margin-bottom: 12px;
+}
+.meta .name {
+  font-weight: 700;
+}
+.meta .role {
+  color: var(--secondary-color);
+  font-size: 13px;
+}
+.tech-pill-grid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 2px solid;
+  font-weight: 700;
+  font-size: 13px;
+}
+.mini-stats {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+}
+.mini-stats .num {
+  font-weight: 800;
+}
+.mini-stats .lbl {
+  color: var(--secondary-color);
+  font-size: 12px;
 }
 
 /* --Hero Ends-- */
@@ -373,7 +437,7 @@ a {
     text-align: left;
   }
   .about__info--details > p {
-    font-size: 1.3rem;
+    font-size: 1.23rem;
   }
 }
 
@@ -422,14 +486,20 @@ a {
   gap: 1.875rem;
 }
 .article {
-  box-shadow: 0 2px 10px rgb(0 0 0 / 35%);
-  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   padding: 1.25rem 0.5rem;
   height: 35rem;
   overflow: hidden;
+  box-shadow: 0 12px 30px rgba(24, 24, 35, 0.06);
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #fff, #fafbfd);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(24, 24, 35, 0.08);
 }
 .img__container {
   max-width: 37.5rem;
@@ -442,11 +512,11 @@ a {
   height: auto;
   border-radius: 0.5rem;
   box-shadow: 0 2px 10px rgb(0 0 0 / 35%);
-  transform: translateY(0);
-  transition: transform 10s ease-in-out;
+  transition: transform 12s linear, opacity 260ms ease;
 }
 .img__container > img:hover {
-  transform: translateY(-80%);
+  transform: translateY(-60%);
+  opacity: 0.98;
 }
 .article__content {
   display: flex;
@@ -580,7 +650,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  gap: 2.25rem;
 }
 .contact__details {
   display: flex;
@@ -611,21 +681,46 @@ a {
 .contact__logo {
   fill: var(--tertiary-color);
 }
-.form {
+.contact__mail--card {
+  display: flex;
+  flex-direction: column;
+  gap: 12;
+  max-width: 37.5rem;
+}
+.contact__mail--content {
+  padding: 1rem;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  box-shadow: 0 8px 24px rgba(24, 24, 35, 0.06);
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.form > input {
-  width: 100%;
-  padding: 0.7rem 0.5rem;
-  font-size: 1rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.5rem;
+.contact__mail--content > h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
-.form > input:focus {
-  border: 1px solid var(--tertiary-color);
-  outline: var(--tertiary-color);
+.contact__mail--content > p {
+  color: var(--secondary-color);
+}
+.contact__mail--action {
+  display: flex;
+  gap: 8;
+  flex-wrap: wrap;
+}
+.contact__mail--availability {
+  display: flex;
+  gap: 12;
+  align-items: center;
+}
+.contact__mail--item {
+  margin-left: auto;
+  text-align: right;
+  font-size: 13;
+  color: var(--secondary-color);
+}
+.contact__mail--text {
+  font-weight: 600;
 }
 @media screen and (min-width: 37.5rem) {
   .contact__details--personal > p > span {

@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
-import { MdEmail, MdPhone } from "react-icons/md";
+import { useState } from "react";
 import { FaAddressCard } from "react-icons/fa";
-import { contextApi } from "../context";
+import { MdEmail, MdPhone } from "react-icons/md";
 
 const Contact = () => {
-  const { email, setEmail } = useContext(contextApi);
-  const emailSubmitHandler = (e) => {
-    e.preventDefault();
-    console.log("Inside handler", email);
-  };
-  console.log(email);
+
+  const mailtoHref = `mailto:nabinkhadka330@gmail.com?subject=${encodeURIComponent(
+    "Opportunity"
+  )}&body=${encodeURIComponent(
+    "Hi Nabin,\n\nI saw your portfolio and would like to discuss..."
+  )}`;
+
   return (
     <section className="contact" id="contact">
       <div className="contact__wrapper container">
@@ -32,18 +32,44 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <form className="form">
-            <input
-              type="email"
-              placeholder="Enter email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button className="btn" onSubmit={(e) => emailSubmitHandler(e)}>
-              Submit Now
-            </button>
-          </form>
+
+          <aside
+            className="contact__mail--card"
+            aria-label="contact quick actions"
+          >
+            <div
+              className="contact__mail--content"
+            >
+              <h3>Let’s build something together</h3>
+              <p >
+                Open to frontend & fullstack roles — prefer email. Quick actions
+                below.
+              </p>
+
+              <div
+                className="contact__mail--action"
+              >
+                <a
+                  href={mailtoHref}
+                  className="btn"
+                  aria-label="Open mail client"
+                >
+                  Email me
+                </a>
+              </div>
+
+              <div
+                className="contact__mail--availability"
+              >
+                <div
+                  className="contact__mail--item"
+                >
+                  <div className="contact__mail--text">Availability</div>
+                  <div>Usually replies within 48 hours</div>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
