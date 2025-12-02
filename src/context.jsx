@@ -1,20 +1,31 @@
 import { createContext, useEffect, useState } from "react";
-import { data } from "./data";
-
 export const contextApi = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const [projects, setProjects] = useState(data);
-  const [datas, setDatas] = useState("frontend");
+  const [isDark, setIsDark] = useState(() => {
+    try {
+      const stored = localStorage.getItem("theme");
+      if (stored) return stored === "dark";
+      return (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      );
+    } catch {
+      return false;
+    }
+  });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  useEffect(() => {
-    const filteredData = data.filter((info) => info.projectType === datas);
-    setProjects(filteredData);
-  }, [datas]);
 
-  const handleSubmitData = (txt) => {
-    setDatas(txt);
-  };
+  useEffect(() => {
+    try {
+      const root = document.documentElement;
+      if (isDark) root.classList.add("dark");
+      else root.classList.remove("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    } catch {}
+  }, [isDark]);
+
+  const handleToggle = () => setIsDark((s) => !s);
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -25,14 +36,12 @@ export const ContextProvider = ({ children }) => {
   return (
     <contextApi.Provider
       value={{
-        projects,
-        handleSubmitData,
         isSidebarOpen,
         setIsSidebarOpen,
         openSidebar,
         closeSidebar,
-        datas,
-        setDatas,
+        isDark,
+        handleToggle,
       }}
     >
       {children}

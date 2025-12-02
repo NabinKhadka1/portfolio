@@ -1,77 +1,71 @@
 const About = () => {
   return (
-    <section className="about" id="about">
-      <div className="container about__wrapper">
-        <h2 className="about__title text-center">About Me </h2>
-        <div className="about__info">
-          <div className="hero-right" aria-hidden>
-            <div className="card profile-card">
-              <div className="avatar">NK</div>
-              <div className="meta">
-                <div className="name">Nabin Khadka</div>
-                <div className="role">Senior Frontend Engineer</div>
-              </div>
-
-              <div className="tech-pill-grid">
-                <span
-                  className="pill"
-                  style={{ borderColor: "var(--clr-react)" }}
-                >
-                  React
-                </span>
-                <span
-                  className="pill"
-                  style={{ borderColor: "var(--clr-react)" }}
-                >
-                  Nextjs
-                </span>
-                <span className="pill" style={{ borderColor: "var(--clr-js)" }}>
-                  TypeScript
-                </span>
-                <span className="pill" style={{ borderColor: "var(--clr-js)" }}>
-                  Redux
-                </span>
-                <span className="pill" style={{ borderColor: "var(--clr-js)" }}>
-                  Tailwindcss
-                </span>
-                <span
-                  className="pill"
-                  style={{ borderColor: "var(--clr-node)" }}
-                >
-                  Node
-                </span>
-                <span
-                  className="pill"
-                  style={{ borderColor: "var(--clr-mongo)" }}
-                >
-                  Mongo
-                </span>
-              </div>
-
-              <div className="mini-stats">
-                <div>
-                  <div className="num">3.5+</div>
-                  <div className="lbl">Years</div>
-                </div>
-                <div>
-                  <div className="num">Platform Impacted</div>
-                  <div className="lbl">EdTech, OCR, Ecommerce</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="about__info--details ">
-            <p>
-              I am a Frontend Developer with over 3.5 years of experience
-              building fast, accessible, and maintainable web applications. I
-              specialize in the React and Next.js ecosystem and focus on
-              crafting component-driven architectures that scale across teams
-              and products. I drive performance improvements, accessibility
-              audits, and developer productivity through clean abstractions and
-              documented patterns. I enjoy mentoring developers, running
-              meaningful code reviews, and creating a culture of high
-              engineering standards.
+    <section
+      id="about"
+      className="px-4 pt-8 py-12 lg:py-16 md:px-8 lg:px-20 xl:px-0 bg-white dark:bg-gray-900"
+    >
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            About Me
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Passionate about creating digital experiences that make a difference
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-6">
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-balance">
+              I am a Fullstack Developer with over 3.5 years of experience. My
+              expertise spans across React, Nextjs, Node, Typescript, Redux,
+              MongoDB. I drive performance improvements, accessibility audits,
+              and developer productivity through clean abstractions and
+              documented patterns.
             </p>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-balance">
+              I enjoy mentoring developers, running meaningful code reviews and
+              creating a culture of high engineering standards. I’m motivated by
+              complex UI problems, system design, and building products that
+              make a measurable difference.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+              <i className="fa-brands fa-react text-4xl text-primary-600 dark:text-primary-400 mb-4"></i>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                React/Nextjs
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                UI Framework
+              </p>
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+              <i className="fa-brands fa-js-square text-4xl text-primary-600 dark:text-primary-400 mb-4"></i>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Node
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Runtime environment
+              </p>
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+              <i className="fa-brands fa-css3-alt text-4xl text-primary-600 dark:text-primary-400 mb-4"></i>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Typescript
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Type safety
+              </p>
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+              <i className="fa-brands fa-node-js text-4xl text-primary-600 dark:text-primary-400 mb-4"></i>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                MongoDb
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Database
+              </p>
+            </div>
           </div>
         </div>
       </div>

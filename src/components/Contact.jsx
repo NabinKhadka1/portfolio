@@ -1,75 +1,121 @@
-import { useState } from "react";
-import { FaAddressCard } from "react-icons/fa";
-import { MdEmail, MdPhone } from "react-icons/md";
-
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaLocationArrow,
+  FaPhone,
+} from "react-icons/fa";
 const Contact = () => {
-
-  const mailtoHref = `mailto:nabinkhadka330@gmail.com?subject=${encodeURIComponent(
-    "Opportunity"
-  )}&body=${encodeURIComponent(
-    "Hi Nabin,\n\nI saw your portfolio and would like to discuss..."
-  )}`;
-
   return (
-    <section className="contact" id="contact">
-      <div className="contact__wrapper container">
-        <h2 className="contact__title text-center">Contact Me </h2>
-        <div className="contact__info">
-          <div className="contact__details">
-            <h3 className="contact__details--title">Personal Info</h3>
-            <div className="contact__details--personal">
-              <p>
-                <MdEmail className="contact__logo" />
-                <span>nabinkhadka330@gmail.com</span>
-              </p>
-              <p>
-                <MdPhone className="contact__logo" />
-                <span>+977 9861547326</span>
-              </p>
-              <p>
-                <FaAddressCard className="contact__logo" />
-                <span>Basundhara, Kathmandu</span>
-              </p>
-            </div>
-          </div>
-
-          <aside
-            className="contact__mail--card"
-            aria-label="contact quick actions"
-          >
-            <div
-              className="contact__mail--content"
-            >
-              <h3>Let’s build something together</h3>
-              <p >
-                Open to frontend & fullstack roles — prefer email. Quick actions
-                below.
-              </p>
-
-              <div
-                className="contact__mail--action"
-              >
-                <a
-                  href={mailtoHref}
-                  className="btn"
-                  aria-label="Open mail client"
-                >
-                  Email me
-                </a>
+    <section id="contact" className="px-4 pt-8 py-12 lg:py-16 md:px-8 lg:px-20 xl:px-0 bg-primary-50 dark:bg-gray-800">
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Get In Touch
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Let's build something together
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                  <FaEnvelope className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    Email
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    nabinkhadka330@gmail.com
+                  </p>
+                </div>
               </div>
-
-              <div
-                className="contact__mail--availability"
-              >
-                <div
-                  className="contact__mail--item"
-                >
-                  <div className="contact__mail--text">Availability</div>
-                  <div>Usually replies within 48 hours</div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                  <FaPhone className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    Phone
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    +977 9861547326
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+                  <FaLocationArrow className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    Location
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Basundhara, Kathmandu
+                  </p>
                 </div>
               </div>
             </div>
-          </aside>
+            <div className="flex space-x-4">
+              <a
+                arget="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/NabinKhadka1"
+                className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors"
+              >
+                <FaGithub />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/nabinkhadka1"
+                className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+          <form className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg space-y-6">
+            <div>
+              <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-primary-500 dark:bg-gray-800 dark:text-white"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-primary-500 dark:bg-gray-800 dark:text-white"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 dark:text-gray-300 font-medium mb-2">
+                Message
+              </label>
+              <textarea
+                rows="4"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-primary-500 dark:bg-gray-800 dark:text-white"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              aria-disabled="true"
+              disabled
+              className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg font-semibold transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>

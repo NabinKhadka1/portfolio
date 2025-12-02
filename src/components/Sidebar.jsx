@@ -1,6 +1,7 @@
 import Cross from "/cross.svg";
 import { useContext, useEffect, useRef } from "react";
 import { contextApi } from "../context";
+import { navLinks } from "../data";
 
 const Sidebar = () => {
   const sidebarRef = useRef();
@@ -19,45 +20,41 @@ const Sidebar = () => {
   }, [sidebarRef]);
 
   return (
-    <section className={sidebars} ref={sidebarRef}>
+    <section
+      className={`${sidebars} bg-white dark:bg-gray-900`}
+      ref={sidebarRef}
+    >
       <aside>
-        <div className="sidebar__header">
+        <div className="sidebar__header container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="navbar__brand">
-            <a href="#home" className="logo">
+            <a
+              href="#home"
+              className="logo text-2xl font-bold text-gray-800 dark:text-white"
+            >
               nabin.dev
             </a>
           </div>
-          <button className="sidebar__remove" onClick={closeSidebar}>
-            <img src={Cross} alt="cross icon" />
+          <button
+            className="sidebar__remove w-7.5 h-7.5"
+            onClick={closeSidebar}
+          >
+            <img src={Cross} alt="cross icon" className="w-full h-full" />
           </button>
         </div>
 
-        <ul className="sidebar__menu">
-          <li className="sidebar__list">
-            <button onClick={closeSidebar}>
-              <a href="#home">Home</a>
-            </button>
-          </li>
-          <li className="sidebar__list">
-            <button onClick={closeSidebar}>
-              <a href="#about">About</a>
-            </button>
-          </li>
-          <li className="sidebar__list">
-            <button onClick={closeSidebar}>
-              <a href="#portfolio">Portfolio</a>
-            </button>
-          </li>
-          <li className="sidebar__list">
-            <button onClick={closeSidebar}>
-              <a href="#contact">Contact</a>
-            </button>
-          </li>
-          <li className="sidebar__list">
-            <button onClick={closeSidebar}>
-              <a href="#footer">Footer</a>
-            </button>
-          </li>
+        <ul className="sidebar__menu flex flex-col px-6 space-y-6">
+          {navLinks.map(({ id, href, label }) => (
+            <li key={id}>
+              <button onClick={closeSidebar}>
+                <a
+                  href={href}
+                  className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  {label}
+                </a>
+              </button>
+            </li>
+          ))}
         </ul>
       </aside>
     </section>
