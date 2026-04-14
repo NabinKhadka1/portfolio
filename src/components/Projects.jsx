@@ -17,7 +17,7 @@ const Projects = () => {
             <div key={project._id} className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
               <div className="h-48 overflow-hidden">
                 <img
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                   src={project.image}
                   alt={project.title}
                 />
