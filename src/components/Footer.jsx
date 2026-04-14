@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="w-full max-w-7xl mx-auto">
         <div className="text-center">
           <div className="text-2xl font-bold mb-4">Nabin Khadka</div>
-          <p className="text-gray-400 mb-6">Frontend Developer</p>
+          <p className="text-gray-400 mb-6">Fullstack Developer</p>
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-400">
-              Copyright © 2025. All rights reserved
+              Copyright © 2026. All rights reserved
             </p>
           </div>
         </div>

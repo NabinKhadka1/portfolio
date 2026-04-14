@@ -22,7 +22,7 @@ const Experience = () => {
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                          Frontend Developer
+                          Fullstack Developer
                         </h3>
                         <p className="text-primary-600 dark:text-primary-400 font-medium">
                           OLE Nepal
@@ -34,7 +34,7 @@ const Experience = () => {
                     </div>
                     <ul className="text-gray-600 dark:text-gray-300 space-y-2">
                       <li>
-                        • Lead frontend development for multiple initiatives,
+                        • Lead fullstack development for multiple initiatives,
                         including EdTech platform and OCR applications
                       </li>
                       <li>
@@ -43,7 +43,7 @@ const Experience = () => {
                       </li>
                       <li>
                         • Engaged in recruiting and onboarding junior and
-                        mid-level frontend developers
+                        mid-level  developers
                       </li>
                     </ul>
                   </div>

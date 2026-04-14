@@ -1,45 +1,75 @@
 import {
-  FaNewspaper,
   FaShoppingCart
 } from "react-icons/fa";
-import { SlSocialGithub } from "react-icons/sl";
-import Ecommerce from "/ecommerce.png";
-import GithubInfo from "/githubInfo.png";
-import News from "/news.png";
+import Ecommerce from "/ecommerce-platform.png";
+import LearningPlatform from "/learning-platform.png";
+import IOCR from "/iocr.png"
+import EPAATH from "/epaath.png"
+import OLEWebsite from "/olewebsite.png"
+import FinanceTracker from "/finance-tracker.png"
+
 export const projects = [
+  {
+    _id: 1,
+    image: LearningPlatform, 
+    title: "OLE Learning Platform",
+    desc: "Ed-tech platform serving thousands of learners with documents, audio, video, curated courses, games, and interactive stories — delivered in 5+ languages.",
+    languages: ["Nextjs", "TypeScript", "Django"],
+    code: "",
+    demo: "https://learning.olenepal.org",
+    projectType: "production",
+  },
+  {
+    _id: 2,
+    image: IOCR, 
+    title: "IOCR Platform",
+    desc: "OCR platform that transforms images into structured digital content — extract and clean text, convert between document formats, and split multi-page scans.",
+    languages: ["React", "TypeScript", "a11y"],
+    code: "",
+    demo: "https://iocr.olenepal.org",
+    projectType: "production",
+  },
+  {
+    _id: 3,
+    image: EPAATH, 
+    title: "ePaath",
+    desc: "Interactive digital learning modules for primary education. Built engaging, performant UI interactions with a focus on cross-device compatibility and smooth user experience.",
+    languages: ["JavaScript","SVG Animation"],
+    code: "",
+    demo: "https://epaath.olenepal.org",
+    projectType: "production",
+  },
+  {
+    _id: 4,
+    image: OLEWebsite, 
+    title: "OLE Website",
+    desc: "Website for OLE Nepal — an NGO that has impacted 400,000+ students across Nepal through digital learning, teacher training, and school infrastructure since 2007.",
+    languages: ["Django", "PostgreSQL"],
+    code: "",
+    demo: "https://olenepal.org",
+    projectType: "production",
+  },
+  {
+    _id: 5,
+    image: FinanceTracker, 
+    title: "Finance Tracker",
+    desc: "Full-stack personal finance app with expense tracking, budgeting, and analytics. Server-rendered frontend with Next.js and a Django REST Framework backend.",
+    languages: ["Next.js", "Django", "PostgreSQL"],
+    code: "", 
+    demo: "",
+    projectType: "personal",
+  },
   {
     _id: 1017,
     image: Ecommerce,
     title: "Ecommerce",
-    desc: "Surf through a huge collection of items. Implemented cart, authentication, authorization, products, orders, shipping, admin, search and much more",
+    desc: "Full-stack e-commerce platform with cart, authentication, order management, product search, admin dashboard, and shipping — built end-to-end.",
     languages: ["React", "Node", "MongoDB"],
     code: "",
     demo: "https://youtu.be/50-w0JZQA4k",
     titleLogo: <FaShoppingCart />,
     projectType: "fullstack",
-  },
-  {
-    _id: 1013,
-    image: GithubInfo,
-    title: "Github Info",
-    desc: "Search github information.Uses github api to fetch github users, fusion charts to display data and auth0 for authentication. ",
-    languages: ["React","Github API"],
-    code: "https://github.com/NabinKhadka1/GithubInfo",
-    demo: "https://react-search-github-info.netlify.app/",
-    titleLogo: <SlSocialGithub />,
-    projectType: "react",
-  },
-  {
-    _id: 1015,
-    image: News,
-    title: "News",
-    desc: "Search your favourite news and read its detail. Used angola news api and implemented pagination features",
-    languages: ["React", "Angola API"],
-    code: "https://github.com/NabinKhadka1/news",
-    demo: "https://react-searchnews.netlify.app/",
-    titleLogo: <FaNewspaper />,
-    projectType: "react",
-  },
+  }
 ];
 
 export const navLinks = [
